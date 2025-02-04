@@ -1,0 +1,43 @@
+<style>
+    .menu_opisanie li {
+        & .more_open {
+            display: none;
+        }
+        & .menu_blink_span {
+            transform: rotate(0deg);
+        }
+        &.on .more_open {
+            display: block;
+        }
+        &.on .menu_blink_span {
+            transform: rotate(90deg);
+        }
+    }
+    </style>
+     
+    <ul class="menu_opisanie">
+        <li>
+            <button class="blink menu_blink"> <span class="menu_blink_span"> ►</span>Read More</button>
+            <p class="more_open">Все качественно, выгодно по доступной цене</p>
+        </li>
+        <li>
+            <button class="blink menu_blink"> <span class="menu_blink_span"> ►</span>Read More</button>
+            <p class="more_open">Все качественно, выгодно по доступной цене</p>
+        </li>
+        <li>
+            <button class="blink menu_blink"> <span class="menu_blink_span"> ►</span>Read More</button>
+            <p class="more_open">Все качественно, выгодно по доступной цене</p>
+        </li>
+    </ul>
+     
+    <script>
+    const op = document.querySelector('.menu_opisanie')
+    op.addEventListener('click', e => {
+        const curb = e.target.closest('button')
+        if (!curb) return; 
+        const onli = op.querySelector('.on');
+        onli?.classList.remove('on')
+        const curli = curb.closest('li');
+        curli.classList.toggle('on', curli !== onli)
+    })
+    </script>

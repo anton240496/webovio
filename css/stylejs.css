@@ -1,0 +1,101 @@
+/* все ниже классы обезательны */
+.menu_opisanie li {
+    /* & .more_open {
+      font-size: 0px;
+    } */
+  
+    /* & .menu_blink_span {
+      transform: rotate(0deg);
+    } */
+  
+    &.on .more_open {
+      font-size: 16px;
+    }
+  
+    &.on .menu_blink {
+      color: #FFD723;
+      border-bottom: 1px solid #FFD723;
+    }
+  
+    &.on .blink::after{
+      content: '';
+      background-color:#FFD723 ;
+    }
+  
+    &.on .menu_blink_span {
+      transform: rotate(90deg);
+    }
+  
+  
+  }
+  
+  /* .menu_opisanie  */
+  .slick-dots{
+    display: flex;
+    position: absolute;
+   
+    gap: 10px;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    width: fit-content;
+  }
+
+  .menu_opisanie .slick-dots{
+    bottom: -50px;
+  }
+
+  .cart_table .slick-dots{
+    bottom: 25px;
+  }
+  
+  /* .menu_opisanie */
+   .slick-dots li button{
+      font-size: 0;
+      width: 10px;
+      height: 10px;
+      background-color: #1f384399;
+      border-radius: 50%;
+  }
+  
+  /* .menu_opisanie  */
+  .slick-dots .slick-active button{
+    background-color:#FFD723;
+  }
+  
+  /* .menu_opisanie  */
+  .slick-arrow{
+    position: absolute;
+    
+    display: inline-block;
+    font-size: 0px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+  }
+
+   .menu_opisanie .slick-arrow{
+    bottom: -60px;
+   }
+
+   .cart_table .slick-arrow{
+    bottom: 20px;
+   }
+
+.slick-initialized .slick-slide {
+    text-align: center;
+   }
+  
+  /* .menu_opisanie  */
+  .slick-prev{
+    left: 0;
+    border-right: 10px solid #1f384399;
+  }
+  
+  /* .menu_opisanie  */
+  .slick-next{
+    right: 0;
+    
+    border-left: 10px solid #1f384399;
+  }
